@@ -1,1 +1,235 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oskar - Junior Java Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <style>
+        :root {
+            --bg-gradient-start: #1d2b4a;
+            --bg-gradient-end: #121212;
+            --card-bg-color: rgba(22, 33, 62, 0.5);
+            --card-border-color: rgba(83, 120, 149, 0.3);
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --accent-color: #3d84b8; /* A brighter, more modern blue */
+            --hover-color: #e94560;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            background-attachment: fixed;
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .animated-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 2rem;
+            margin-bottom: 5rem;
+            animation-delay: 0.2s;
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            padding: 5px;
+            background-color: var(--bg-gradient-end);
+            transition: transform 0.4s ease;
+        }
+        .avatar:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--header-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-text .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .section {
+            background: var(--card-bg-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--card-border-color);
+        }
+
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--header-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .tech-widgets {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .tech-widget {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .tech-widget:hover {
+            transform: translateY(-5px);
+            background-color: var(--accent-color);
+        }
+
+        .tech-widget i {
+            font-size: 2.2rem;
+        }
+
+        .tech-widget span {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .section p {
+            text-align: center;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .section a:hover {
+            color: var(--hover-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 1rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero animated-entry">
+            <img src="https://github.com/oskar5510.png" alt="Avatar" class="avatar">
+            <div class="hero-text">
+                <h1>Oskar</h1>
+                <p class="subtitle">Junior Java Developer</p>
+                <p>A self-development enthusiast passionate about discovering new technologies. I get the most satisfaction from digging into code and bringing projects to life.</p>
+                <div class="social-links">
+                    <a href="https://github.com/oskar5510" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="mdi mdi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/oskar5510" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="mdi mdi-linkedin"></i></a>
+                    <a href="https://hyperskill.org/my-learning/621426775" target="_blank" rel="noopener noreferrer" title="Hyperskill Profile"><i class="mdi mdi-school"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="skills" class="section animated-entry" style="animation-delay: 0.4s;">
+                <h2>Core Technologies</h2>
+                <div class="tech-widgets">
+                    <div class="tech-widget"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="tech-widget"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                    <div class="tech-widget"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                </div>
+            </section>
+
+            <section id="learning" class="section animated-entry" style="animation-delay: 0.6s;">
+                <h2>My Learning Path</h2>
+                <p>I'm currently sharpening my skills on the <a href="https://hyperskill.org/my-learning/621426775" target="_blank" rel="noopener noreferrer">Hyperskill</a> platform, where I tackle practical projects to gain hands-on knowledge.</p>
+            </section>
+
+            <section id="plans" class="section animated-entry" style="animation-delay: 0.8s;">
+                <h2>Future Goals</h2>
+                <p>My main goal is to continue my growth in the Java ecosystem, aiming to build more complex and useful applications.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Generated by Gemini @ Google</p>
+        </footer>
+    </div>
+</body>
+</html>
